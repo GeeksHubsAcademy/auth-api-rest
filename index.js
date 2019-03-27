@@ -24,7 +24,6 @@ app.post( '/login', loginController);
 
 app.get('/user/:id' , userController)
 
-app.get( '/:a?/:b?/:c?/:d?', ( req, res ) => res.status( 404 ).send( 404 ) )
 
 
 app.listen(port , () => console.log('servidor escuchando en el puerto ' + port))

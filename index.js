@@ -8,10 +8,10 @@ const port = +process.argv[2] || 3000;
 app.use(express.json());
 
 
-app.get('/hola', (request, response) => {
-    console.log('alguien hecho una petición Get a /hola');
-    let miResponse = { code: 200, data: 'Adios mundo cruel'};
-    response.json( miResponse );
+app.get('/ping', (request, response) => {
+    console.log('alguien hecho una petición Get a /ping');
+    let miResponse = {data: 'pong'};
+    response.status(200).json( miResponse );
 })
 
 

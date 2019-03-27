@@ -5,10 +5,9 @@ const port = +process.argv[2] || 3000;
 
 
 app.get('/hola', (request, response) => {
-
-    response.send('Adios mundo cruel!')
-
     console.log('alguien hecho una petición Get a /hola')
+    let miResponse = { code: 200, data: 'Adios mundo cruel'}
+    response.json( miResponse )
 })
 
 

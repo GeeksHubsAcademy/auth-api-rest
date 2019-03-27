@@ -20,7 +20,5 @@ module.exports = ( req, res ) => {
         } else {
             res.status(200).json({message: 'Bienvenido al castillo ' + userFound.username})
         }
-
     }
-
 }

@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const registerController = require('./controllers/register.js')
+const registerController = require( './controllers/register.js' );
+const loginController = require('./controllers/login.js');
 
 const port = +process.argv[2] || 3000
 
@@ -15,9 +16,9 @@ app.get('/ping', (request, response) => {
     response.status(200).json( miResponse );
 })
 
+app.post( '/register', registerController );
 
-
-app.post('/register', registerController);
+app.post( '/login', loginController);
 
 
 app.listen(port , () => console.log('servidor escuchando en el puerto ' + port))
